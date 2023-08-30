@@ -87,7 +87,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up" data-aos-duration="3000" style="width: 18rem;">
-                        <img src="WhatsApp Image 2023-08-29 at 13.58.00.jpeg" class="Kurniawan" alt="...">
+                        <img src="img/WhatsApp Image 2023-08-29 at 13.58.00.jpeg" class="Kurniawan" alt="...">
                         <div class="card-body">
                             <p class="card-text">Halo Saya Erlangga Kurniawan Tempat Tangga Lahir Jakarta 16-April 2007.</p>
                         </div>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card" style="width: 22rem;">
-                        <img src="1.jpeg" class="ekurniawan" alt="..." data-aos="fade-up">
+                        <img src="img/WhatsApp Image 2023-08-29 at 13.50.38.jpeg" class="ekurniawan" alt="..." data-aos="fade-up">
                         <div class="card-body">
                             <p class="card-text">Kesukaan Saya </p>
                         </div>
@@ -104,7 +104,7 @@
 
                 <div class="col-md-4 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="WhatsApp Image 2023-08-29 at 13.51.10.jpeg" class="Kurniawan" alt="..." data-aos="fade-up">
+                        <img src="img/WhatsApp Image 2023-08-29 at 13.51.10.jpeg" class="Kurniawan" alt="..." data-aos="fade-up">
                         <div class="card-body">
                             <p class="card-text">17 Agustus </p>
                         </div>
@@ -113,7 +113,7 @@
 
                 <div class="col-md-4 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="2.jpeg" class="erlangga" alt="..." data-aos="fade-up">
+                        <img src="img/2.jpeg" class="erlangga" alt="..." data-aos="fade-up">
                         <div class="card-body">
                             <p class="card-text">Hobi</p>
                         </div>
@@ -122,7 +122,7 @@
 
                 <div class="col-md-4 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="3.jpeg" class="angga" alt="..." data-aos="fade-up">
+                        <img src="img/3.jpeg" class="angga" alt="..." data-aos="fade-up">
                         <div class="card-body">
                             <p class="card-text">XI-RPL</p>
                         </div>
@@ -146,19 +146,19 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form>
+                    <form name="erlangga-contact">
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
+                            <input type="name" class="form-control" id="name" aria-describedby="emailHelp" name="Nama Lengkap">
                         </div>
                         <div class="mb-3">
                             <label for="Email" class="form-label">Email</label>
-                            <input type="Email" class="form-control" id="Email" aria-describedby="emailHelp">
+                            <input type="Email" class="form-control" id="Email" aria-describedby="emailHelp" name="Email">
                         </div>
                         <div class="mb-3">
                             <label for="Pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="Pesan" rows="3"></textarea>
+                            <textarea class="form-control" id="Pesan" rows="3" name="Pesan"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Kirim</button>
 
@@ -183,6 +183,17 @@
     <script>
       AOS.init();
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw6tV0Rd1qRh3lQD81A1ffc-w8FW0A-_m2lRO3twRsgPQhkVbxnA3rQYNusscPcM4P5/exec'
+        const form = document.forms['erlangga-contact']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 
 </body>
 
